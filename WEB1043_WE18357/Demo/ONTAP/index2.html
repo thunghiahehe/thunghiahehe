@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="box">
+        <header><img src="img/banner.jpg" alt=""></header>
+        <article>
+            <ul>
+                <li><a href="">Tuyển sinh</a></li>
+                <li><a href="">Chương trình đào tạo</a></li>
+                <li><a href="">Hoạt động sinh viên</a></li>
+                <li><a href="">Doanh nghiệp tuyển dụng</a></li>
+            </ul>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="">Tuyển sinh</a></li>
+                <li><a href="">Chương trình đào tạo</a></li>
+                <li><a href="">Hoạt động sinh viên</a></li>
+                <li><a href="">Doanh nghiệp tuyển dụng</a></li>
+                <li><a href="">Kì thi quốc gia</a></li>
+            </ul>
+        </nav>
+
+        <aside>
+            <h1 align="center" style="color: rgb(15, 15, 59); font-size: 20px;">Cơ sở Hà Nội</h1>
+            <div class="image">
+                <img id="img" onclick="changeImage()" src="img/zitzang.jpg" alt="">
+            </div>
+
+            <div class="footer">
+                <p>Nguyen Thu Nghia</p>
+            </div>
+        </aside>
+    </div>
+    <script>
+        var index = 1;
+        changeImage = function () {
+            var imgs = ["img/zitzang.jpg", "img/zitzang2.jpg", "img/zitzang3.jpg", "img/zitzang4.jpg"];
+            document.getElementById("img").src = imgs[index];
+            index++;
+            if (index == 4) {
+                index = 0;
+            }
+        }
+        setInterval(changeImage, 1000);
+    </script>
+</body>
+
+</html>

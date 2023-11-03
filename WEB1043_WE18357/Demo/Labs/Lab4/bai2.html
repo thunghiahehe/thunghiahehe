@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="sv.hienThi()">Hiển thị</button>
+    <script>
+        var sv = new Object();
+        sv.name = prompt("Nhập họ tên: ") // thêm thuộc tính name được nhập từ bàn phím vào object sv 
+        sv.diem = prompt("Nhập điểm: ") // thêm thuộc tính diem được nhập từ bàn phím vào object sv 
+
+
+        sv.hienThi = function () {
+            if (sv.diem >= 5) {
+                sv.hocLuc = 'đậu'
+            } else {
+                sv.hocLuc = 'rớt'
+            }
+
+            document.write(`<h3>họ và tên: ${sv.name} </h3>`)
+            document.write(`<h3>Điểm: ${sv.diem} </h3>`)
+            document.write(`<h3>học lực: ${sv.hocLuc} </h3>`)
+        }
+
+    </script>
+</body>
+
+</html>

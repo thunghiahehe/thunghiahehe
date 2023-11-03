@@ -1,0 +1,51 @@
+use QLDA
+go
+--Câu 1:
+IF OBJECT_ID('fn_TGLV_DA') is not null
+	DROP FUNCTION fn_TGLV_DA
+go
+CREATE FUNCTION fn_TGLV_DA(@MaDA int)
+RETURNS float
+AS
+BEGIN
+	RETURN(SELECT SUM(THOIGIAN)
+		   FROM PHANCONG
+		   WHERE MADA = @MaDA)
+END
+go
+SELECT dbo.fn_TGLV_DA(1) as TongTG
+
+--Câu 2:
+--2a
+IF OBJECT_ID('fn_TTPB') is not null
+	DROP FUNCTION fn_TTPB
+go
+CREATE FUNCTION fn_TTPB(@MaDA int)
+RETURNS TABLE
+AS
+	RETURN(SELECT MADA, TENDEAN, TENPHG
+			FROM PHONGBAN pb join DEAN da ON pb.MAPHG = da.PHONG
+			WHERE @MaDA = da.MADA)
+go
+SELECT * FROM fn_TTPB(1)
+go
+--2b
+IF OBJECT_ID('fn_TTPB') is not null
+	DROP FUNCTION fn_TTPB
+go
+CREATE FUNCTION fn_TTPB(@MaDA int)
+	RETURNS @Bang TABLE(
+						MaDA int,
+						TenDA nvarchar(15),
+						TenPHG nvarchar(15)
+						)
+AS
+BEGIN
+	INSERT @Bang
+	SELECT MADA, TENDEAN, TENPHG
+			FROM PHONGBAN pb join DEAN da ON pb.MAPHG = da.PHONG
+			WHERE @MaDA = da.MADA
+	RETURN
+END
+go
+SELECT * FROM fn_TTPB(1)

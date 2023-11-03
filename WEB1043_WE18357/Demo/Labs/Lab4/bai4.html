@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #btn1 {
+            margin-right: 20px;
+        }
+    </style>
+
+
+    <button id="btn1" value="Open" onclick="openWindow()">Mở cửa sổ mới</button>
+    <button id="btn1" value="Open" onclick="closeWindow()">Đóng cửa sổ</button>
+    <button id="btn1" value="Open" onclick="checkWindow()">Kiểm tra đóng mở cửa sổ</button>
+    <script>
+        var wd;
+        function openWindow() {
+            wd = window.open("https://fullstack.edu.vn/");
+        }
+
+        function closeWindow() {
+            if (wd.closed == false) { // nếu trang web chưa đóng
+                wd.close();
+            }
+        }
+
+        function checkWindow() {
+            if (wd.closed == false) {
+                alert("chưa đóng trang web")
+            } else {
+                alert("Đã đóng trang web")
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

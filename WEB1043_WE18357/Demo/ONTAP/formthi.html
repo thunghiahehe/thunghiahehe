@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form {
+            border: 1px solid;
+            padding: 5px 20px 20px 20px;
+            width: 400px;
+        }
+
+        .form p {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        span {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <p>HÓA ĐƠN</p>
+        <label for="">Khách hàng</label>
+        <input type="text" name="name" id="name">
+        <span id="checkName"></span>
+        <br><br>
+        <label for="">Loại hàng</label>
+        <select name="loai" id="loai">
+            <option value="loai1">Loại 1</option>
+            <option value="loai2">Loại 2</option>
+            <option value="loai3">Loại 3</option>
+        </select>
+        <br><br>
+        <label for="">Đơn giá</label>
+        <input type="text" name="donGia" id="donGia" readonly>
+        <br><br>
+        <label for="">Số lượng</label>
+        <input type="text" name="soLuong" id="soLuong">
+        <span id="checkSo"></span>
+        <br><br>
+        <label for="">Thành tiền</label>
+        <input type="text" name="thanhTien" id="thanhTien" readonly>
+        <br><br>
+        <label for="">Nơi nhận hàng</label>
+        <input type="radio" name="address" id="" value="noiThanh">Nội thành
+        <input type="radio" name="address" id="" value="ngoaiThanh">Ngoại thành
+        <br><br>
+        <label for="">Phí vận chuyển</label>
+        <input type="text" name="phiVanChuyen" id="phiVanChuyen">
+        <span id="checkPhi"></span>
+        <br><br>
+        <div class="button" style="text-align: center;">
+            <input type="button" value="ĐẶT MUA" onclick="validateForm()">
+        </div>
+    </div>
+    
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            if (name == "") {
+                document.getElementById("checkName").innerHTML = "Vui lòng nhập tên";
+                return false;
+            }
+            if (name != "") {
+                document.getElementById("checkName").innerHTML = "";
+            }
+            var loai = document.getElementById("loai").value;
+            var donGia;
+            if (loai === "loai1") {
+                donGia = 60000;
+            }
+            else if (loai === "loai2") {
+                donGia = 40000;
+            }
+            else if (loai === "loai3") {
+                donGia = 20000;
+            }
+            document.getElementById("donGia").value = donGia;
+
+            var soLuong = document.getElementById("soLuong").value;
+            if (soLuong == "") {
+                document.getElementById("checkSo").innerHTML = "Vui lòng nhập số lượng";
+                return false;
+            }
+            if (isNaN(soLuong)) {
+                document.getElementById("checkSo").innerHTML = "Số lượng phải là số";
+                return false;
+            }
+            if (soLuong < 0) {
+                document.getElementById("checkSo").innerHTML = "Số lượng bắt buộc là số dương";
+                return false;
+            }
+            if (soLuong != "") {
+                document.getElementById("checkSo").innerHTML = "";
+            }
+
+            var thanhTien = soLuong * donGia;
+            document.getElementById("thanhTien").value = thanhTien;
+
+            var address = document.querySelector("input[name='address']:checked");
+            var phiVanChuyen;
+            if (address) {
+                if (address.value === "noiThanh") {
+                    phiVanChuyen = 0;
+                }
+                else if (address.value === "ngoaiThanh") {
+                    phiVanChuyen = 30000;
+                }
+                document.getElementById("phiVanChuyen").value = phiVanChuyen;
+            } else {
+                document.getElementById("checkPhi").innerHTML = "Vui lòng chọn nơi nhận hàng";
+                return;
+            }
+
+            alert("Đặt mua thành công");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

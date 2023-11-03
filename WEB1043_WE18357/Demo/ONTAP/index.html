@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <header><img src="img/banner.jpg" alt=""></header>
+        <article>
+            <ul>
+                <li><a href="">Tuyển sinh</a></li>
+                <li><a href="">Chương trình đào tạo</a></li>
+                <li><a href="">Hoạt động sinh viên</a></li>
+                <li><a href="">Doanh nghiệp tuyển dụng</a></li>
+            </ul>
+        </article>
+        <nav>
+            <ul>
+                <li><a href="">Tuyển sinh</a></li>
+                <li><a href="">Chương trình đào tạo</a></li>
+                <li><a href="">Hoạt động sinh viên</a></li>
+                <li><a href="">Doanh nghiệp tuyển dụng</a></li>
+                <li><a href="">Kì thi quốc gia</a></li>
+            </ul>
+        </nav>
+
+        <aside class="content">
+            <h1 style="color:  rgb(9, 9, 83); margin-left: 15px;">Đăng kí tài khoản</h1>
+            <h2 style="color:  rgb(52, 190, 146); margin-left: 15px;">Thông tin cơ bản</h2>
+            <p style="margin-left: 15px;">Vui lòng nhập đầy đủ thông tin bên dưới để tạo tài khoản mới, các mục có dấu <a style="color: red;">(*)</a> là bắt buộc.</p>
+            <form onsubmit="return send()">
+            <div>
+                <label for="">Tên đăng nhập<a style="color: red;">(*)</a></label>
+                <input type="text" id="tendn" name="tendn">
+                <span id="tendnloi"></span>
+            </div>
+        
+            <div>
+                <label for="">Mật khẩu<a style="color: red;">(*)</a></label>
+                <input type="text" id="mk1" name="mk1">
+                <span id="mk1loi"></span>
+            </div>
+        
+            <div>
+                <label for="">Nhập lại mật khẩu<a style="color: red;">(*)</a></label>
+                <input type="text" id="mk2" name="mk2"> 
+                <span id="mk2loi"></span>
+            </div>
+        
+            <div>
+                <label for="">Họ và chữ lót<a style="color: red;">(*)</a></label>
+                <input type="text" id="ten1" name="ten1">
+                <span id="ten1loi"></span>
+            </div>
+        
+            <div>
+                <label for="">Tên<a style="color: red;">(*)</a></label>
+                <input type="text" id="ten2" name="ten2">
+                <span id="ten2loi"></span>
+            </div>
+        
+            <div>
+                <label for="">Ngày sinh<a style="color: red;">(*)</a></label>
+                <input type="date" id="ngay" name="ngay">
+                <span id="ngayloi"></span>
+            </div>
+        
+            <div>
+                <label for="">Email<a style="color: red;">(*)</a></label>
+                <input type="text" id="email" name="email">
+                <span id="emailloi"></span>
+            </div>
+        
+            <div>
+                <label for="">Phone</label>
+                <input type="text" id="phone" name="phone">
+                <span id="phoneloi"></span>
+            </div>
+        
+            <button type="submit" class="btn1">Đăng kí</button>
+            <button type="reset" class="btn2">Làm lại</button>
+            </form>
+            <div class="footer">
+                <p>Nguyen Thu Nghia</p>
+            </div>
+        </aside>
+
+
+    </div>
+</body>
+
+</html>
+<script src="index.js"></script>

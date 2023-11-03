@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assest/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <nav class="header-top">
+                <div class="header">
+                    <div class="header-contact">
+                        <ul class="header__top-contact-list">
+                            <li class="header__top-contact-item">
+                                <a href="" class="header__top-contact-link">
+                                    <i class="header__top-contact__icon fas fa-globe-americas"></i>
+                                    NGÔN NGỮ
+                                </a>
+                            </li>
+                            <li class="header__top-contact-item">
+                                <a href="" class="header__top-contact-link">
+                                    VIE
+                                    <i class="fa-sharp fa-solid fa-angle-down"></i>
+                                </a>
+                            </li>
+                            <li class="header__top-contact-item">
+                                <a href="" class="header__top-contact-link">
+                                    <i class="header-contact__icon fas fa-share-alt"></i>
+                                    XÃ HỘI CỦA CHÚNG TÔI
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="header__top-contact-list">
+                            <li class="header__top-contact-item">
+                                <a href="" class="header__top-contact-link">
+                                    <i class="fa-solid fa-star"></i>
+                                    CÁC GÓI TOUR
+                                </a>
+                            </li>
+                            <li class="header__top-contact-item">
+                                <a href="" class="header__top-contact-link">
+                                    <i class="header-contact__icon fas fa-map-marker-alt"></i>
+                                    LIÊN HỆ CHÚNG TÔI
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="nav__menu">
+                <div class="nav__logo">
+                    <a href="">
+                        <img src="/assest/image/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="navbar__menu">
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="#trangchu" class="navbar__link">
+                                Trang chủ</a>
+                        </li>
+                        <li class="navbar__item navbar__item--hover">
+                            <a href="#main2" class="navbar__link">Thông tin về chúng tôi</a>
+                            <!-- Sub 1 Navbar -->
+                            <ul class="sub-1-navbar__list">
+                                <li class="sub-1-navbar__item sub-1-navbar__item--status-hot">
+                                    <a href="#main2" class="sub-1-navbar__link">Thông tin</a>
+                                </li>
+                                <li class="sub-1-navbar__item">
+                                    <a href="#main2" class="sub-1-navbar__link">Giói giảm giá</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item navbar__item--hover">
+                            <a href="#main3" class="navbar__link">Giói</a>
+                            <!-- Sub 1 Navbar -->
+                            <ul class="sub-1-navbar__list">
+                                <li class="sub-1-navbar__item sub-1-navbar__item--status-new">
+                                    <a href="#main3" class="sub-1-navbar__link">Giói mới</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item navbar__item--hover">
+                            <a href="#main4" class="navbar__link">Lựa chọn</a>
+                        </li>
+                        <li class="navbar__item navbar__item--hover">
+                            <a href="#main5" class="navbar__link">Chi tiết</a>
+                        </li>
+                        <li class="navbar__item navbar__item--hover">
+                            <a href="#main6" class="navbar__link">Liên hệ</a>
+                        </li>
+                        <li class="navbar__item">
+                            <button class="navbar__link js-login">Đăng nhập</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="banner">
+            <button class="btn-shine2">
+                <span><i class="fa-solid fa-phone"></i>Liên hệ ngay</span>
+            </button>
+        </div>
+        <div class="main__filter">
+            <form action="" class="main__form">
+                <div class="main__filter-top">
+                    <div class="main__filter-top-left">
+                        <ul class="main__filter-tabs-box">
+                            <li class="main__filter-a active-black">Lựa chọn</li>
+                            <li class="main__filter-a ">Lựa chọn</li>
+                            <li class="main__filter-a ">Lựa chọn</li>
+                        </ul>
+
+                    </div>
+                    <div class="main__filter-top-right">
+                        <a href="">1 Phòng <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="">2 khách <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                </div>
+                <div class="main__filter-button">
+                    <button class="filter-button filter-button-handle">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Tìm kiếm theo khu vực</span>
+                    </button>
+                    <div class="searchAddress">
+                        <section>
+                            <div class="searchAddress__body">
+                                <div class="searchAddress__title"> <span>Bạn muốn đến đâu</span></div>
+                                <div class="searchAddress__body-img">
+                                    <div class="searchAddress__body-item">
+                                        <img class="searchAddress__body-item-img" src="/assest/image/thgioi.jpg" alt="">
+                                        <span>Tìm kiếm linh hoạt</span>
+                                    </div>
+                                    <div class="searchAddress__body-item">
+                                        <img class="searchAddress__body-item-img" src="/assest/image/hanquoc.webp"
+                                            alt="">
+                                        <span>Hàn QUốc</span>
+                                    </div>
+                                    <div class="searchAddress__body-item">
+                                        <img class="searchAddress__body-item-img" src="/assest/image/thailan.webp"
+                                            alt="">
+                                        <span>Thái Lan</span>
+                                    </div>
+                                    <div class="searchAddress__body-item">
+                                        <img class="searchAddress__body-item-img" src="/assest/image/hoaki.webp" alt="">
+                                        <span>Hoa Kì</span>
+                                    </div>
+                                    <div class="searchAddress__body-item">
+                                        <img class="searchAddress__body-item-img" src="/assest/image/uc.webp" alt="">
+                                        <span>Úc</span>
+                                    </div>
+                                    <div class="searchAddress__body-item">
+                                        <img class="searchAddress__body-item-img" src="/assest/image/chauau.webp"
+                                            alt="">
+                                        <span>Châu Âu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <button class="filter-button">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Nhận phòng || Trả phòng</span>
+                    </button>
+                    <button class="filter-button2">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Leaving from</span>
+                    </button>
+                    <div class="main__filte-search">
+                        <button class="main__filte-search-btn">
+                            Tìm kiếm
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+        <div class="destinationFil">
+            <div class="destinationFil__left">
+                <div class="destinationFil__left-icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
+                <ul class="tabs-box">
+                    <li class="tab"><span><img src="/assest/image/hoboi.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/baibien.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab active"><span><img src="/assest/image/bietthu.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/ganbien.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/hoboi.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/khungcanhdep.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/nhatrencay.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/nongthon.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/nongtrai.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/phongngu.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/thanhpho.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/hoboi.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/hoboi.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/hoboi.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                    <li class="tab"><span><img src="/assest/image/hoboi.jpg" alt="">
+                            <p>Hồ bơi tuyệt vời</p>
+                        </span></li>
+                </ul>
+                <div class="destinationFil__left-icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
+            </div>
+            <div class="destinationFil-right">
+                <button>
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                        style="display:block;height:14px;width:14px;fill:currentColor" aria-hidden="true"
+                        role="presentation" focusable="false">
+                        <path
+                            d="M5 8c1.306 0 2.418.835 2.83 2H14v2H7.829A3.001 3.001 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.829 4H2V4h6.17A3.001 3.001 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+                        </path>
+                    </svg>
+                    <span>Bộ lọc</span>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container__item">
+                <div class="container__item-img">
+                    <img src="/assest/image/anh10.webp" alt="">
+                </div>
+                <div class="container__item-title">
+                    <div class="container__item-title-top">
+                        <span>Calaca, Philippin</span>
+                        <span class="star-icon"><i class="fa-solid fa-star"></i> 4,87</span>
+                    </div>
+                    <div class="container__item-title-body">
+                        Do Gary Fell, GFAB Architects thiết kế
+                    </div>
+                    <div class="container__item-title-body2">
+                        Ngày 26 tháng 3 - Ngày 01 tháng 4
+                    </div>
+                    <div class="container__item-title-button">
+                        <div><span>đ</span>4.999.999 <span>đêm</span></div> <button class="book-room">Đặt phòng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container__item">
+                <div class="container__item-img">
+                    <img src="/assest/image/anh3.webp" alt="">
+                </div>
+                <div class="container__item-title">
+                    <div class="container__item-title-top">
+                        <span>Calaca, Philippin</span>
+                        <span><i class="fa-solid fa-star"></i> 4,87</span>
+                    </div>
+                    <div class="container__item-title-body">
+                        Do Gary Fell, GFAB Architects thiết kế
+                    </div>
+                    <div class="container__item-title-body2">
+                        Ngày 26 tháng 3 - Ngày 01 tháng 4
+                    </div>
+                    <div class="container__item-title-button">
+                        <div><span>đ</span>4.999.999 <span>đêm</span></div> <button class="book-room">Đặt phòng</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__item">
+                <div class="container__item-img">
+                    <img src="/assest/image/anh4.webp" alt="">
+                </div>
+                <div class="container__item-title">
+                    <div class="container__item-title-top">
+                        <span>Calaca, Philippin</span>
+                        <span><i class="fa-solid fa-star"></i> 4,87</span>
+                    </div>
+                    <div class="container__item-title-body">
+                        Do Gary Fell, GFAB Architects thiết kế
+                    </div>
+                    <div class="container__item-title-body2">
+                        Ngày 26 tháng 3 - Ngày 01 tháng 4
+                    </div>
+                    <div class="container__item-title-button">
+                        <div><span>đ</span>4.999.999 <span>đêm</span></div> <button class="book-room">Đặt phòng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container__item">
+                <div class="container__item-img">
+                    <img src="/assest/image/anh5.webp" alt="">
+                </div>
+                <div class="container__item-title">
+                    <div class="container__item-title-top">
+                        <span>Calaca, Philippin</span>
+                        <span><i class="fa-solid fa-star"></i> 4,87</span>
+                    </div>
+                    <div class="container__item-title-body">
+                        Do Gary Fell, GFAB Architects thiết kế
+                    </div>
+                    <div class="container__item-title-body2">
+                        Ngày 26 tháng 3 - Ngày 01 tháng 4
+                    </div>
+                    <div class="container__item-title-button">
+                        <div><span>đ</span>4.999.999 <span>đêm</span></div> <button class="book-room">Đặt phòng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container__item">
+                <div class="container__item-img">
+                    <img src="/assest/image/anh6.webp" alt="">
+                </div>
+                <div class="container__item-title">
+                    <div class="container__item-title-top">
+                        <span>Calaca, Philippin</span>
+                        <span><i class="fa-solid fa-star"></i> 4,87</span>
+                    </div>
+                    <div class="container__item-title-body">
+                        Do Gary Fell, GFAB Architects thiết kế
+                    </div>
+                    <div class="container__item-title-body2">
+                        Ngày 26 tháng 3 - Ngày 01 tháng 4
+                    </div>
+                    <div class="container__item-title-button">
+                        <div><span>đ</span>4.999.999 <span>đêm</span></div> <button class="book-room">Đặt phòng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container__item">
+                <div class="container__item-img">
+                    <img src="/assest/image/anh7.webp" alt="">
+                </div>
+                <div class="container__item-title">
+                    <div class="container__item-title-top">
+                        <span>Calaca, Philippin</span>
+                        <span><i class="fa-solid fa-star"></i> 4,87</span>
+                    </div>
+                    <div class="container__item-title-body">
+                        Do Gary Fell, GFAB Architects thiết kế
+                    </div>
+                    <div class="container__item-title-body2">
+                        Ngày 26 tháng 3 - Ngày 01 tháng 4
+                    </div>
+                    <div class="container__item-title-button">
+                        <div><span>đ</span>4.999.999 <span>đêm</span></div> <button class="book-room">Đặt phòng</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__item">
+                <div class="container__item-img">
+                    <img src="/assest/image/anh9.webp" alt="">
+                </div>
+                <div class="container__item-title">
+                    <div class="container__item-title-top">
+                        <span>Calaca, Philippin</span>
+                        <span><i class="fa-solid fa-star"></i> 4,87</span>
+                    </div>
+                    <div class="container__item-title-body">
+                        Do Gary Fell, GFAB Architects thiết kế
+                    </div>
+                    <div class="container__item-title-body2">
+                        Ngày 26 tháng 3 - Ngày 01 tháng 4
+                    </div>
+                    <div class="container__item-title-button">
+                        <div><span>đ</span>4.999.999 <span>đêm</span></div> <button class="book-room">Đặt phòng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container__item">
+                <div class="container__item-img">
+                    <img src="/assest/image/anh8.webp" alt="">
+                </div>
+                <div class="container__item-title">
+                    <div class="container__item-title-top">
+                        <span>Calaca, Philippin</span>
+                        <span><i class="fa-solid fa-star"></i> 4,87</span>
+                    </div>
+                    <div class="container__item-title-body">
+                        Do Gary Fell, GFAB Architects thiết kế
+                    </div>
+                    <div class="container__item-title-body2">
+                        Ngày 26 tháng 3 - Ngày 01 tháng 4
+                    </div>
+                    <div class="container__item-title-button">
+                        <div><span>đ</span>4.999.999 <span>đêm</span></div> <button class="book-room">Đặt phòng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="outstanding">
+            <div class="outstanding-title">
+                CÁC ĐIỂM ĐẾN NỔI BẬT
+            </div>
+            <h1 class="outstanding-container-title">H&B Villas Phu Quoc - 3 Bedrooms</h1>
+            <div class="outstanding-container-bottom">
+                <div>
+                    <span><i class="fa-solid fa-star"></i> 4,87</span>
+                    <span><a href="">12k đánh giáz</a></span>
+                    <span><a href="">phuquoc,kiengiang,vietnam</a></span>
+                </div>
+                <div class="outstanding-container-aa">
+                    <div class="outstanding-container-share">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            role="presentation" focusable="false"
+                            style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 2; overflow: visible;">
+                            <g fill="none">
+                                <path d="M27 18v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9"></path>
+                                <path d="M16 3v23V3z"></path>
+                                <path d="M6 13l9.293-9.293a1 1 0 0 1 1.414 0L26 13"></path>
+                            </g>
+                        </svg>
+                        <span>Chia sẻ</span>
+                    </div>
+                    <div class="outstanding-container-share">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            role="presentation" focusable="false"
+                            style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 2; overflow: visible;">
+                            <path
+                                d="m16 28c7-4.733 14-10 14-17 0-1.792-.683-3.583-2.05-4.95-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05l-2.051 2.051-2.05-2.051c-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05-1.367 1.367-2.051 3.158-2.051 4.95 0 7 7 12.267 14 17z">
+                            </path>
+                        </svg>
+                        <span>Lưu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="outstanding-container">
+                <div class="outstanding-container-left">
+                    <img src="/assest/image/phuquoc01.webp" alt="">
+                </div>
+                <div class="outstanding-container-right">
+                    <div class="outstanding-container-right-top">
+                        <img src="/assest/image/phuquoc02.webp" alt="">
+                        <img class="boder-img" src="/assest/image/phuquoc03.webp" alt="">
+                    </div>
+                    <div class="outstanding-container-right-top">
+                        <img src="/assest/image/phuquoc04.webp" alt="">
+                        <img class="boder-img2" src="/assest/image/phuquoc05.webp" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="outstanding-container2">
+                <div class="outstanding-container2-left">
+
+                </div>
+                <div class="outstanding-container2-right">
+
+                </div>
+            </div>
+        </div>
+        <div class="Choose__detail">
+            <div class="Choose__detail-body-right">
+                <div class="choose-right-body">
+                    <div class="Choose__detail-body-right-Ready">
+                        Sẵn sàng chào đón bạn
+                    </div>
+                    <div class="Choose__detail-body-right-title">
+                        Hãy đến tham quan và trải nghiệm dịch vụ của chúng tôi
+                    </div>
+                    <div class="Choose__detail-body-right-text">
+                        Nằm giữa những dải đồi núi và bờ biển tuyệt đẹp, Đà Nẵng là nơi bạn có thể thỏa sức khám phá sự
+                        kết hợp tuyệt vời giữa văn hóa truyền thống và sự hiện đại của một thành phố đang phát triển.
+                        Với những bãi biển tuyệt đẹp, kiến trúc độc đáo và ẩm thực đa dạng, Đà Nẵng chắc chắn sẽ là một
+                        điểm đến tuyệt vời cho chuyến du lịch của bạn
+                    </div>
+                    <div class="Choose__detail-body-right-detail">Chi tiết</div>
+                    <div class="Choose__detail-body-right-describe">
+                        <div class="describe-left">
+                            <span><i class="fa-solid fa-utensils"></i>Thực phẩm chất lượng</span>
+                            <span><i class="fa-solid fa-bed"></i>Nơi nghỉ ngơi</span>
+                        </div>
+                        <div class="describe-right">
+                            <span><i class="fa-solid fa-person-circle-plus fix-span"></i>Phục vụ nhiệt tình</span>
+                            <span><i class="fa-solid fa-car fix-span"></i>Xe buýt đưa đón</span>
+                        </div>
+                    </div>
+                    <div class="line-Choose__detail">
+
+                    </div>
+                    <div class="describe__footer">
+                        <div class="describe__footer-left">
+                            <img src="/assest/image/danang1.webp" alt="">
+                            <div class="describe__footer-left-title">
+                                <div class="describe__footer-title">Đà Nẵng</div>
+                                <div class="describe__footer-title2">Thiên đường du lịch</div>
+                            </div>
+                        </div>
+                        <div class="describe__footer-right">
+                            <button class="btn-shine3">
+                                <span><i class="fa-solid fa-phone"></i>Liên hệ ngay</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Choose__detail-body-left">
+                <img src="/assest/image/danang2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="subscribe">
+        <div class="subscribe-body">
+            <div class="subscribe-body-sub">
+                <div class="subscribe-body-sub-title">
+                    <h3>Đăng ký và được giảm giá 20%</h3>
+                    <p>Tham gia bản tin của chúng tôi và khám phá những điểm đến mới để truyền cảm hứng cho khách du
+                        lịch bên trong. Ngoài ra, được giảm giá 20% tại cửa hàng trực tuyến của chúng tôi. Hàng tuần,
+                        bạn sẽ nhận được lời khuyên của chuyên gia, mẹo, ưu đãi độc quyền và hơn thế nữa.</p>
+                </div>
+                <form action="" class="subscribe-body-sub-form">
+                    <input type="text" placeholder="Địa chỉ email" required="">
+                    <button>Đăng kí</button>
+                    <p>Theo dõi các bản tin và chương trình khuyến mãi của Travelia <span>Đọc Chính sách bảo mật của
+                            chúng tôi.</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="wrap">
+            <div class="box1-footer">
+                <div class="box1-item-top">
+                    <div class="box1-item-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="box1-item-title">
+                        <a href="#trangchu">
+                            <img src="/assest/image/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="box1-item-content">
+                    <p>Dành cho người khám phá mọi nơi</p>
+                </div>
+                <div class="box1-item-logo">
+                    <h3>THEO DÕI CHÚNG TÔI</h3>
+                    <ul>
+                        <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" class="text-2xl" width="1em" height="1em"
+                                    viewBox="0 0 32 32" fill="currentColor" role="img"
+                                    aria-label="Hành tinh cô đơn trên Facebook">
+                                    <path
+                                        d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+                                        fill="#1877F2"></path>
+                                    <path
+                                        d="M24 16C24 11.6 20.4 8 16 8C11.6 8 8 11.6 8 16C8 20 10.9 23.3 14.7 23.9V18.3H12.7V16H14.7V14.2C14.7 12.2 15.9 11.1 17.7 11.1C18.6 11.1 19.5 11.3 19.5 11.3V13.3H18.5C17.5 13.3 17.2 13.9 17.2 14.5V16H19.4L19 18.3H17.1V24C21.1 23.4 24 20 24 16Z"
+                                        fill="white"></path>
+                                </svg></a></li>
+                        <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" class="text-2xl" width="1em" height="1em"
+                                    viewBox="0 0 32 32" fill="currentColor" role="img"
+                                    aria-label="Hành tinh cô đơn trên Instagram">
+                                    <path
+                                        d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+                                        fill="#F00073"></path>
+                                    <path
+                                        d="M16 9.19995C18.2 9.19995 18.5 9.19995 19.4 9.19995C20.2 9.19995 20.6 9.39995 20.9 9.49995C21.3 9.69995 21.6 9.79995 21.9 10.1C22.2 10.4 22.4 10.7 22.5 11.1C22.6 11.4 22.7 11.8 22.8 12.6C22.8 13.5 22.8 13.7 22.8 16C22.8 18.3 22.8 18.5 22.8 19.4C22.8 20.2 22.6 20.6 22.5 20.9C22.3 21.3 22.2 21.6 21.9 21.9C21.6 22.2 21.3 22.4 20.9 22.5C20.6 22.6 20.2 22.7 19.4 22.8C18.5 22.8 18.3 22.8 16 22.8C13.7 22.8 13.5 22.8 12.6 22.8C11.8 22.8 11.4 22.6 11.1 22.5C10.7 22.3 10.4 22.2 10.1 21.9C9.79995 21.6 9.59995 21.3 9.49995 20.9C9.39995 20.6 9.29995 20.2 9.19995 19.4C9.19995 18.5 9.19995 18.3 9.19995 16C9.19995 13.7 9.19995 13.5 9.19995 12.6C9.19995 11.8 9.39995 11.4 9.49995 11.1C9.69995 10.7 9.79995 10.4 10.1 10.1C10.4 9.79995 10.7 9.59995 11.1 9.49995C11.4 9.39995 11.8 9.29995 12.6 9.19995C13.5 9.19995 13.8 9.19995 16 9.19995ZM16 7.69995C13.7 7.69995 13.5 7.69995 12.6 7.69995C11.7 7.69995 11.1 7.89995 10.6 8.09995C10.1 8.29995 9.59995 8.59995 9.09995 9.09995C8.59995 9.59995 8.39995 9.99995 8.09995 10.6C7.89995 11.1 7.79995 11.7 7.69995 12.6C7.69995 13.5 7.69995 13.8 7.69995 16C7.69995 18.3 7.69995 18.5 7.69995 19.4C7.69995 20.3 7.89995 20.9 8.09995 21.4C8.29995 21.9 8.59995 22.4 9.09995 22.9C9.59995 23.4 9.99995 23.6 10.6 23.9C11.1 24.1 11.7 24.1999 12.6 24.2999C13.5 24.2999 13.8 24.2999 16 24.2999C18.2 24.2999 18.5 24.2999 19.4 24.2999C20.3 24.2999 20.9 24.1 21.4 23.9C21.9 23.7 22.4 23.4 22.9 22.9C23.4 22.4 23.6 22 23.9 21.4C24.1 20.9 24.1999 20.3 24.2999 19.4C24.2999 18.5 24.2999 18.2 24.2999 16C24.2999 13.8 24.2999 13.5 24.2999 12.6C24.2999 11.7 24.1 11.1 23.9 10.6C23.7 10.1 23.4 9.59995 22.9 9.09995C22.4 8.59995 22 8.39995 21.4 8.09995C20.9 7.89995 20.3 7.79995 19.4 7.69995C18.5 7.69995 18.3 7.69995 16 7.69995Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M16 11.7C13.6 11.7 11.7 13.6 11.7 16C11.7 18.4 13.6 20.3 16 20.3C18.4 20.3 20.3 18.4 20.3 16C20.3 13.6 18.4 11.7 16 11.7ZM16 18.8C14.5 18.8 13.2 17.6 13.2 16C13.2 14.5 14.4 13.2 16 13.2C17.5 13.2 18.8 14.4 18.8 16C18.8 17.5 17.5 18.8 16 18.8Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M20.4 12.6C20.9522 12.6 21.4 12.1522 21.4 11.6C21.4 11.0477 20.9522 10.6 20.4 10.6C19.8477 10.6 19.4 11.0477 19.4 11.6C19.4 12.1522 19.8477 12.6 20.4 12.6Z"
+                                        fill="white"></path>
+                                </svg></a></li>
+                        <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" class="text-2xl" width="1em" height="1em"
+                                    viewBox="0 0 32 32" fill="currentColor" role="img"
+                                    aria-label="Hành tinh cô đơn trên Twitter">
+                                    <path
+                                        d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+                                        fill="#1DA1F2"></path>
+                                    <path
+                                        d="M24 11C23.4 11.3 22.8 11.4 22.1 11.5C22.8 11.1 23.3 10.5 23.5 9.7C22.9 10.1 22.2 10.3 21.4 10.5C20.8 9.9 19.9 9.5 19 9.5C16.9 9.5 15.3 11.5 15.8 13.5C13.1 13.4 10.7 12.1 9 10.1C8.1 11.6 8.6 13.5 10 14.5C9.5 14.5 9 14.3 8.5 14.1C8.5 15.6 9.6 17 11.1 17.4C10.6 17.5 10.1 17.6 9.6 17.5C10 18.8 11.2 19.8 12.7 19.8C11.5 20.7 9.7 21.2 8 21C9.5 21.9 11.2 22.5 13 22.5C19.1 22.5 22.5 17.4 22.3 12.7C23 12.3 23.6 11.7 24 11Z"
+                                        fill="white"></path>
+                                </svg></a></li>
+                        <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" class="text-2xl" width="1em" height="1em"
+                                    viewBox="0 0 32 32" fill="currentColor" role="img"
+                                    aria-label="Hành tinh cô đơn trên YouTube">
+                                    <path
+                                        d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+                                        fill="#FF0000"></path>
+                                    <path
+                                        d="M23.6 12.1C23.4 11.4 22.9 10.9 22.2 10.7C21 10.4 15.9 10.4 15.9 10.4C15.9 10.4 10.9 10.4 9.60001 10.7C8.90001 10.9 8.4 11.4 8.2 12.1C8 13.4 8 16 8 16C8 16 8 18.6 8.3 19.9C8.5 20.6 9 21.1 9.7 21.3C10.9 21.6 16 21.6 16 21.6C16 21.6 21 21.6 22.3 21.3C23 21.1 23.5 20.6 23.7 19.9C24 18.6 24 16 24 16C24 16 24 13.4 23.6 12.1ZM14.4 18.4V13.6L18.6 16L14.4 18.4Z"
+                                        fill="white"></path>
+                                </svg></a></li>
+                        <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" class="text-2xl" width="1em" height="1em"
+                                    viewBox="0 0 32 32" fill="currentColor" role="img"
+                                    aria-label="Hành tinh cô đơn trên Pinterest">
+                                    <path
+                                        d="M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16Z"
+                                        fill="#E60023"></path>
+                                    <path
+                                        d="M16 8C11.6 8 8 11.6 8 16C8 19.3 10 22.1 12.8 23.3C12.8 22.7 12.8 22.1 12.9 21.5C13.1 20.8 13.9 17.1 13.9 17.1C13.9 17.1 13.6 16.6 13.6 15.8C13.6 14.6 14.3 13.7 15.1 13.7C15.8 13.7 16.2 14.2 16.2 14.9C16.2 15.6 15.7 16.7 15.5 17.7C15.3 18.5 15.9 19.2 16.8 19.2C18.3 19.2 19.3 17.3 19.3 14.9C19.3 13.1 18.1 11.8 16 11.8C13.6 11.8 12.1 13.6 12.1 15.6C12.1 16.3 12.3 16.8 12.6 17.2C12.7 17.4 12.8 17.4 12.7 17.6C12.7 17.7 12.6 18.1 12.5 18.2C12.4 18.4 12.3 18.5 12.1 18.4C11 17.9 10.5 16.7 10.5 15.3C10.5 13 12.4 10.3 16.2 10.3C19.3 10.3 21.3 12.5 21.3 14.9C21.3 18 19.6 20.4 17 20.4C16.1 20.4 15.3 19.9 15 19.4C15 19.4 14.5 21.2 14.4 21.6C14.2 22.2 13.9 22.8 13.6 23.3C14.3 23.5 15.1 23.6 15.9 23.6C20.3 23.6 23.9 20 23.9 15.6C24 11.6 20.4 8 16 8Z"
+                                        fill="white"></path>
+                                </svg></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box2-footer">
+                <div class="box2-item">
+                    <h3>NHỮNG ĐIỂM ĐẾN HẤP DẪN NHẤT</h3>
+                    <ul>
+                        <li><a href="">Vịnh Hạ Long</a></li>
+                        <li><a href="">Huế</a></li>
+                        <li><a href="">Đà Nẵng</a></li>
+                        <li><a href="">Phú Quốc</a></li>
+                        <li><a href="">Hà Nội</a></li>
+                        <li><a href="">Bạch Long Vĩ</a></li>
+                        <li><a href="">Sầm Sơn</a></li>
+                        <li><a href="">Đà Lạt</a></li>
+                        <li><a href="">Thành Phố Hồ Chí Minh</a></li>
+                    </ul>
+                </div>
+                <div class="box2-item">
+                    <h3>SỞ THÍCH DU LỊCH</h3>
+                    <ul>
+                        <li><a href="">Du lịch mạo hiểm</a></li>
+                        <li><a href="">Nghệ thuật và văn hóa</a></li>
+                        <li><a href="">Bãi biển, bờ biển và quần đảo</a></li>
+                        <li><a href="">Ngày lễ gia đình</a></li>
+                        <li><a href="">Lễ hội</a></li>
+                        <li><a href="">Đồ ăn thức uống</a></li>
+                        <li><a href="">Chuyến đi đường bộ</a></li>
+                        <li><a href="">Tuần trăng mật và sự lãng mạn</a></li>
+                        <li><a href="">Du lịch tiết kiệm</a></li>
+                    </ul>
+                </div>
+                <div class="box2-item">
+                    <div class="box2-item-body">
+                        <h3>CỬA HÀNG</h3>
+                        <ul>
+                            <li><a href="">Hướng dẫn điểm đến</a></li>
+                            <li><a href="">Những đứa trẻ hành tinh cô đơn</a></li>
+                            <li><a href="">Cửa hàng hành tinh cô đơn</a></li>
+                            <li><a href="">Hướng dẫn </a></li>
+                        </ul>
+                    </div>
+                    <div class="box2-item-body">
+                        <h3>VỀ CHÚNG TÔI</h3>
+                        <ul>
+                            <li><a href="">Báo chí, thương mại và quảng cáo</a></li>
+                            <li><a href="">Liên hệ chúng tôi</a></li>
+                            <li><a href="">Chính sách bảo mật</a></li>
+                            <li><a href="">Các điều khoản và điều kiện</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <div class="modal">
+        <section class="container__modal froms__modal">
+            <div class="from__modal login">
+                <div class="form-content">
+                    <i class="fa-solid fa-xmark xmark-icon"></i>
+                    <header>Đăng nhập</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" class="input" placeholder="Email">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" class="password" placeholder="Mật Khẩu">
+                            <i class="fa-regular fa-eye-slash eye-icon"></i>
+                        </div>
+
+                        <div class="from-link">
+                            <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        </div>
+
+                        <div class="field button-field">
+                            <button>Đăng kí</button>
+                        </div>
+
+                        <div class="from-link">
+                            <span>Bạn có muốn tạo tài khoản? <a href="#" class="link-modal signup-link">Đăng
+                                    kí</a></span>
+                        </div>
+                    </form>
+
+                    <div class="line-modal"></div>
+                    <div class="media-options">
+                        <a href="#" class="field facebook">
+                            <i class="fa-brands fa-facebook facebook-icon"></i>
+                            <span>Đăng nhập bằng Facebook</span>
+                        </a>
+                    </div>
+
+
+                    <div class="media-options">
+                        <a href="#" class="field google">
+                            <img src="/assest/image/gogoe.png" alt="" class="google-img">
+                            <span>Đăng nhập bằng google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container__modal froms__modal">
+            <div class="from__modal signup">
+                <div class="form-content">
+                    <i class="fa-solid fa-xmark xmark-icon2"></i>
+                    <header>Đăng kí</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" class="input" placeholder="Email">
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" class="input" placeholder="Mật Khẩu">
+                            <i class="fa-regular fa-eye-slash eye-icon"></i>
+                        </div>
+
+                        <div class="field input-field">
+                            <input type="password" class="password" placeholder="Mật Khẩu">
+                            <i class="fa-regular fa-eye-slash eye-icon"></i>
+                        </div>
+
+
+                        <div class="field button-field">
+                            <button>Đăng ký</button>
+                        </div>
+
+                        <div class="from-link">
+                            <span>Bạn có muốn đăng nhập? <a href="#" class="link-modal sigin-link">Đăng nhập</a></span>
+                        </div>
+                    </form>
+
+                    <div class="line-modal"></div>
+                    <div class="media-options">
+                        <a href="#" class="field facebook">
+                            <i class="fa-brands fa-facebook facebook-icon"></i>
+                            <span>Đăng ký bằng Facebook</span>
+                        </a>
+                    </div>
+
+
+                    <div class="media-options">
+                        <a href="#" class="field google">
+                            <img src="/assest/image/gogoe.png" alt="" class="google-img">
+                            <span>Đăng ký bằng google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="modal_onload">
+        <div class="test">
+            <img src="/assest/image/chaomung.png" alt="">
+            <div class="modal_onload-icon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <h1 class="modal_onload-h1">Chào mừng bạn đến với aribnb</h1>
+        </div>
+    </div>
+
+
+
+
+    <script src="/assest/js/main.js"></script>
+</body>
+
+</html>

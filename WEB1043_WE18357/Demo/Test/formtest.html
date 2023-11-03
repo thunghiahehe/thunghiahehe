@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 400px;
+            border: 1px solid;
+            padding: 5px 20px 20px 20px;
+        }
+        p{
+            color: red;
+            font-size: 20px;
+            text-align: center;
+        }
+        span{
+            color: red;
+            font-size: 14px;
+        }
+        label{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p>ĐỔI MẬT KHẨU</p>
+        <label for="">Tên đăng nhập: </label>
+        <input type="text" name="name" id="name">
+        <span id="checkName"></span>
+        <br><br>
+        <label for="">Nhập mật khẩu cũ: </label>
+        <input type="text" name="oldPass" id="oldPass">
+        <span id="checkPass"></span>
+        <br><br>
+        <label for="">Nhập mật khẩu mới: </label>
+        <input type="text" name="newPass" id="newPass">
+        <span id="checkNewPass"></span>
+        <br><br>
+        <label for="">Nhập lại mật khẩu mới: </label>
+        <input type="text" name="reNewPass" id="reNewPass">
+        <span id="checkReNPass"></span>
+        <br><br>
+        <div style="text-align: center;">
+            <input type="button" value="ĐỔI MẬT KHẨU" onclick="validateForm()">
+        </div>
+    </form>
+    <script>
+        function validateForm() {
+            var name=document.getElementById("name").value;
+            if (name=="") {
+                document.getElementById("checkName").innerHTML="Vui lòng nhập tên đăng nhập";
+                return false;
+            }
+            if (name!="") {
+                document.getElementById("checkName").innerHTML="";
+            }
+            var oldPass=document.getElementById("oldPass").value;
+            if (oldPass=="") {
+                document.getElementById("checkPass").innerHTML="Vui lòng nhập mật khẩu cũ";
+                return false;
+            }
+            if (oldPass!="123123") {
+                document.getElementById("checkPass").innerHTML="Vui lòng nhập đúng mật khẩu cũ";
+                return false;
+            }
+            if (oldPass!="") {
+                document.getElementById("checkPass").innerHTML="";
+            }
+            var newPass=document.getElementById("newPass").value;
+            var passRegex = /^(?=.*\d)(?=.*[A-Z]).{8,}$/;
+            if (newPass=="") {
+                document.getElementById("checkNewPass").innerHTML="Vui lòng nhập mật khẩu mới";
+                return false;
+            }
+
+            if (!passRegex.test(newPass)) {
+                document.getElementById("checkNewPass").innerHTML="Mật khẩu mới ít nhất 8 kí tự bao gồm ít nhất 1 số và 1 kí tự Hoa";
+                return false;
+            }
+
+            if (newPass!="") {
+                document.getElementById("checkNewPass").innerHTML="";
+            }
+            var reNewPass=document.getElementById("reNewPass").value;
+            if (reNewPass=="") {
+                document.getElementById("checkReNPass").innerHTML="Vui lòng nhập lại mật khẩu mới";
+                return false;
+            }
+            if (reNewPass!=newPass) {
+                document.getElementById("checkReNPass").innerHTML="Mật khẩu mới không khớp";
+                return false;
+            }
+            if (reNewPass!="") {
+                document.getElementById("checkReNPass").innerHTML=""
+            }
+
+            alert("Đổi mật khẩu thành công");
+            return true;
+        }
+    </script>
+</body>
+</html>

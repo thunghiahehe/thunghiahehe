@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-weight: 10;
+            text-align: center;
+        }
+
+        form {
+            width: 500px;
+            margin: auto;
+            font-size: 15px;
+            padding: 20px;
+            border: 1px solid;
+        }
+
+        span {
+            color: red;
+            font-size: 12px;
+        }
+
+        input[type='button'] {
+            background-color: rgb(0, 180, 180);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>ĐĂNG KÍ THÀNH VIÊN</h1>
+        <label for="name">User</label>
+        <input type="text" id="name" name="name">
+        <span id="checkName"></span>
+        <br><br>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <span id="checkEmail"></span>
+        <br><br>
+        <label for="pass">Password</label>
+        <input type="text" id="pass" name="pass">
+        <span id="checkPass"></span>
+        <br><br>
+        <label for="year">Số năm làm việc</label>
+        <input type="text" id="year" name="year">
+        <span id="checkYear"></span>
+        <br><br>
+        <input type="button" value="Gửi" onclick="validateForm()">
+    </form>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            var year = document.getElementById("year").value;
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (name == "") {
+                document.getElementById("checkName").innerHTML = "Vui lòng nhập user";
+                return false;
+            }
+            if (name != "") {
+                document.getElementById("checkName").innerHTML = "";
+            }
+            if (email == "") {
+                document.getElementById("checkEmail").innerHTML = "Vui lòng nhập email";
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                document.getElementById("checkEmail").innerHTML = "Vui lòng nhập email hợp lệ";
+                return false;
+            }
+            if (email != "") {
+                document.getElementById("checkEmail").innerHTML = "";
+            }
+            if (pass == "") {
+                document.getElementById("checkPass").innerHTML = "Vui lòng nhập password";
+                return false;
+            }
+            if (pass.length < 6 || !/\d/.test(pass)) {
+                document.getElementById("checkPass").innerHTML = "Password phải có ít nhất 6 kí tự và chứa ít nhất 1 kí tự số";
+                return false;
+            }
+            if (pass != "") {
+                document.getElementById("checkPass").innerHTML = "";
+            }
+            if (year == "") {
+                document.getElementById("checkYear").innerHTML = "Vui lòng nhập số năm";
+                return false;
+            }
+            if (isNaN(year)) {
+                document.getElementById("checkYear").innerHTML = "Số năm làm việc phải là số";
+                return false;
+            }
+            if (year < 0) {
+                document.getElementById("checkYear").innerHTML = "Số năm làm việc phải là số dương";
+                return false;
+            }
+            if (year != "") {
+                document.getElementById("checkYear").innerHTML = "";
+            }
+
+            alert("Đăng kí thành công\n\n");
+            return true;
+
+        }
+    </script>
+</body>
+
+</html>

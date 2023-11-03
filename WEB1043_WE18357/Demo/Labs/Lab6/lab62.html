@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tictactoe {
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        button {
+            width: calc(100% / 3 - 6px);
+            height: 96px;
+            background-color: #ccc;
+            margin: 2px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 30px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tictactoe">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+    <script>
+        let flat = true;
+        let counter = 0;
+        let btn = document.querySelectorAll('button');
+        for (let index = 1; index <= btn.length; index++) {
+            const element = btn[index - 1];
+            element.addEventListener('click', () => {
+                counter++;
+                if (flat) {
+                    element.style.backgroundColor = 'red';
+                    element.innerText = 'X';
+                    flat = false;
+                } else {
+                    element.style.backgroundColor = 'blue';
+                    element.innerText = 'O';
+                    flat = true;
+                }
+                if (counter == 8) {
+                    confirm('Game Over');
+                    location.reload();
+                }
+                element.style.pointerEvents = 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.5); /*Đổ bóng cho menu*/
+    position: fixed; /*Cho menu cố định 1 vị trí với top và left*/
+    top: 0; /*Nằm trên cùng*/
+    left: 0; /*Nằm sát bên trái*/
+    z-index: 100000; /*Hiển thị lớp trên cùng*/
+
+}
+
+.image-header {
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    width: 40%;
+    height: auto;
+}
+
+.image-header img {
+    padding-left: 90px;
+    width: 70%;
+    height: auto;
+}
+
+
+#menu-header {
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 60%;
+}
+#menu-header ul{
+    margin: 0;
+    padding: 0;
+  }
+  #menu-header ul li{
+    list-style:none inside;
+    width: auto;
+    float: left;
+    line-height: 35px; /*Cho text canh giữa menu*/
+    color: #fff;
+    padding: 0;
+    margin-right:50px;
+    position: relative;
+  }
+  #menu-header ul li a{
+    /* text-transform: uppercase; */
+    white-space: nowrap; /*Cho chữ trong menu không bị wrap*/
+    padding: 0 10px;
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  
+  }
+
+a:hover {
+    text-decoration: underline;
+}
+/*Submenu*/
+#menu-header ul li ul {
+    position: absolute;
+    width: auto;
+    display: none;
+    background-color: #000000;
+    border-bottom: 3px solid #000000;
+    padding-left: 5px;
+  }
+   
+  #menu-header ul li ul li{
+    display: block;
+    padding:0;
+    margin: 0;
+    float: none;
+  }
+ 
+  #menu-header ul li:hover {
+    background-color: #000000;
+  }
+  #menu-header ul li:hover ul{
+    display: block;
+  }
+
+
+.menu {
+    float: right;
+    padding-left: 50px;
+}
+
+.menu ul li {
+    display: inline;
+    padding-right: 70px;
+}
+
+.menu ul li a {
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu ul li>a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding-top: 250px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+
+form {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 700px;
+    height: 400px;
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+h2 {
+    padding-bottom: 20px;
+    font-weight: 550;
+    font-size: 25px;
+}
+
+p {
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 6px;
+    color: rgba(0, 0, 0, 0.812);
+}
+
+input[type='text'],
+input[type='password'] {
+    width: 300px;
+    height: 40px;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.601);
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+input[type='submit'] {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.601);
+    margin-top: 40px;
+    float: right;
+
+}
+
+footer {
+    background-color: black;
+    height: 100px;
+}
+
+footer p {
+    color: white;
+    font-size: 15px;
+    float: left;
+    margin-left: 50px;
+    padding-top: 45px;
+}

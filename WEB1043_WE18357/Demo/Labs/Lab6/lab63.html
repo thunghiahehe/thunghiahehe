@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover_image {
+            text-align: center;
+        }
+
+        .hover_image img {
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .wrapper_slider {
+            margin-top: 90px;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 10px;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .wrapper_btn {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .wrapper_btn button {
+            margin: 0 10px;
+            padding: 10px 30px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="loadImage()">
+    <div class="hover_image">
+        <img src="img/zitzang.jpg" />
+    </div>
+    <div class="slider">
+        <div class="wrapper_slider">
+            <img src="img/zitzang.jpg" alt="" />
+        </div>
+        <div class="wrapper_btn">
+            <button class="first">first</button>
+            <button>prev</button>
+            <button>next</button>
+            <button>last</button>
+        </div>
+    </div>
+    <script>
+        let img_hover = document.querySelector('.hover_image img');
+        let img_slider = document.querySelector('.wrapper_slider img');
+        let load_image = new Image();
+        let link_img ="img/zitzang.jpg";
+        let btn_first = document.querySelectorAll('button');
+        img_hover.addEventListener('mouseenter', () => {
+            img_hover.setAttribute('src', link_img);
+        });
+        img_hover.addEventListener('mouseleave', () => {
+            img_hover.setAttribute('src', "img/zitzang.jpg");
+        });
+        function loadImage() {
+            load_image.src = link_img;
+            arrayImage.forEach((element) => {
+                let load_image = new Image();
+                load_image.src = element;
+            });
+        }
+        let arrayImage = ["img/zitzang2.jpg", "img/zitzang3.jpg", "img/zitzang4.jpg"];
+
+        let currentIndex = -1;
+        btn_first.forEach((element) => {
+            element.addEventListener('click', () => {
+                let text = element.innerText;
+                switch (text) {
+                    case 'first':
+                        currentIndex = 0;
+                        img_slider.setAttribute('src', arrayImage[currentIndex]);
+                        break;
+                    case 'prev':
+                        if (currentIndex > 0) {
+                            currentIndex--;
+                            img_slider.setAttribute('src', arrayImage[currentIndex]);
+                        }
+                        break;
+                    case 'next':
+                        if (currentIndex < arrayImage.length - 1) {
+                            currentIndex++;
+                            img_slider.setAttribute('src', arrayImage[currentIndex]);
+                        }
+                        break;
+                    case 'last':
+                        currentIndex = arrayImage.length - 1;
+                        console.log(currentIndex);
+                        img_slider.setAttribute('src', arrayImage[currentIndex]);
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

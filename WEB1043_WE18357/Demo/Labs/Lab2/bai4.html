@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const theList = ['Lauren', 'Kevin', true, 35, null, undefined,['one', 'two']];
+        // Xóa phần tử đầu tiên của mảng
+        theList.shift();
+        // Xóa phần tử cuối cùng của mảng
+        theList.pop();
+        // Thêm 'FIRST' vào đầu mảng
+        theList.unshift('FIRST');
+        // Thêm 'hello world' vào vị trí thứ 4 của mảng
+        theList.splice(3,0,'hello world');
+        // Thêm 'middle' vào vị trí thứ 3 của mảng
+        theList.splice(1,0,'middle');
+        // Thêm 'LAST' vào cuối mảng
+        theList.push('LAST');
+        console.log(theList);
+    </script>
+</body>
+</html>

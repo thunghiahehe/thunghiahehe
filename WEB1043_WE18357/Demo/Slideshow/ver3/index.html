@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .tong {
+        width: 700px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .slide {
+        border: 1px solid blueviolet;
+        padding-bottom: 30px;
+    }
+
+    .control {
+        margin: 20px;
+
+    }
+
+    #play {
+        background-color: deeppink;
+        color: white;
+        cursor: pointer;
+    }
+
+    #pause {
+        background-color: deeppink;
+        color: white;
+        cursor: pointer;
+    }
+
+    #anh {
+        width: 400px;
+        height: 300px;
+    }
+</style>
+
+<body>
+    <div class="tong">
+        <h2>ALBUM ẢNH</h2>
+        <div class="slide">
+            <h3>Ảnh <span id="num">1</span>/5</h3>
+            <img src="img/anh0.jpg" alt="" id="anh">
+
+        </div>
+        <div class="control">
+            <button id="play" onclick="startSlideshow()">Play</button>
+            <button id="pause" onclick=" pauseSlideshow()">Pause</button>
+            <button onclick="First()"> First</button>
+            <button onclick="Last()">Last</button>
+        </div>
+    </div>
+    <script>
+        //tạo một mảng để lưu trữ các ảnh
+        var album = [];
+        var intervalId;
+
+        //đẩy các phần tử trong mảng'
+        for (var i = 0; i < 5; i++) {
+            album[i] = new Image();
+            album[i].src = "img/anh" + i + ".jpg"
+        }
+        var index = 0;
+        function slideShow() {
+            index++;
+            if (index >= 5) {
+                index = 0;
+            }
+            document.getElementById('anh').src = album[index].src;
+            document.getElementById('num').innerHTML = index + 1;
+
+        }
+        function startSlideshow() {
+            intervalId = setInterval(slideShow, 3000);
+        }
+
+        function pauseSlideshow() {
+            clearInterval(intervalId);
+        }
+
+        function First() {
+            document.getElementById('anh').src = album[0].src;
+            document.getElementById('num').innerHTML = 1;
+        }
+        function Last() {
+            document.getElementById('anh').src = album[4].src;
+            document.getElementById('num').innerHTML = 5;
+        }
+
+    </script>
+</body>
+
+</html>

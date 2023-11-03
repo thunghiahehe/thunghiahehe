@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="css/signup.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="image-header">
+                <img src="images/cropped-cropped-brixton_logo.png" alt="">
+            </div>
+            <div id="menu-header">
+                <ul>
+                    <li><a href="home.html">TRANG CHỦ</a></li>
+                    <li><a href="home.html">GIỚI THIỆU</a></li>
+                    <li>
+                        <a href="home.html">SẢN PHẨM</a>
+                        <ul class="sub-menu">
+                            <li><a href="home.html">Tất cả sản phẩm</a></li>
+                            <li><a href="home.html">Bảng giá đề xuất</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="home.html">THƯ VIỆN ẢNH</a></li>
+                    <li>
+                        <a href="home.html">SIGN IN</a>
+                        <ul class="sub-menu">
+                            <li><a href="signin.html">Sign in</a></li>
+                            <li><a href="signup.html">Sign up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <h1 style="padding-top: 200px; padding-bottom: 30px; text-align: center;">Đăng ký tài khoản</h1>
+        <form id="register-form">
+            <label for="username-input">Tên đăng nhập:</label>
+            <input type="text" id="username-input" name="username"><br>
+            <span id="username-error"></span><br>
+
+            <label for="password-input">Mật khẩu:</label>
+            <input type="password" id="password-input" name="password"><br>
+            <span id="password-error"></span><br>
+
+            <label for="confirm-password-input">Xác nhận mật khẩu:</label>
+            <input type="password" id="confirm-password-input" name="confirm-password"><br>
+            <span id="confirm-password-error"></span><br>
+
+            <label for="age-input">Tuổi:</label>
+            <input type="number" id="age-input" name="age" min="18" max="60"><br>
+            <span id="age-error"></span><br>
+
+            <label for="phone-input">Số điện thoại:</label>
+            <input type="tel" id="phone-input" name="phone" pattern="[0-9]{10}"><br>
+            <span id="phone-error"></span><br>
+
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input" name="email"><br>
+            <span id="email-error"></span><br>
+
+            <label for="birthdate-input">Ngày sinh:</label>
+            <input type="date" id="birthdate-input" name="birthdate"><br>
+            <span id="birthdate-error"></span><br>
+
+            <input type="submit" value="Đăng ký">
+        </form>
+    </div>
+    <footer style="clear: both;">
+        <p>© 2017 TAYA GLOBAL GROUP. All rights reserved</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById("register-form");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username-input").value;
+            const password = document.getElementById("password-input").value;
+            const confirmPassword = document.getElementById("confirm-password-input").value;
+            const age = document.getElementById("age-input").value;
+            const phone = document.getElementById("phone-input").value;
+            const email = document.getElementById("email-input").value;
+            const birthdate = document.getElementById("birthdate-input").value;
+
+            const usernameError = document.getElementById("username-error");
+            const passwordError = document.getElementById("password-error");
+            const confirmPasswordError = document.getElementById("confirm-password-error");
+            const ageError = document.getElementById("age-error");
+            const phoneError = document.getElementById("phone-error");
+            const emailError = document.getElementById("email-error");
+            const birthdateError = document.getElementById("birthdate-error");
+
+
+
+            let isValid = true;
+
+            // Validate username
+            if (username.trim() === "") {
+                usernameError.style.color = "red";
+                usernameError.style.fontSize = "12px";
+                usernameError.innerText = "Vui lòng nhập tên đăng nhập";
+
+                isValid = false;
+            } else {
+                usernameError.innerText = "";
+            }
+
+            // Validate password
+            if (password.trim() === "") {
+                passwordError.style.color = "red";
+                passwordError.style.fontSize = "12px";
+                passwordError.innerText = "Vui lòng nhập mật khẩu";
+                isValid = false;
+            } else if (password.trim().length <= 6) {
+                passwordError.style.color = "red";
+                passwordError.style.fontSize = "12px";
+                passwordError.innerText = "Mật khẩu phải chứa ít nhất 6 ký tự";
+                isValid = false;
+            } else {
+                passwordError.innerText = "";
+            }
+
+            // Validate confirm password
+            if (confirmPassword.trim() === "") {
+                confirmPasswordError.style.color = "red";
+                confirmPasswordError.style.fontSize = "12px";
+                confirmPasswordError.innerText = "Vui lòng xác nhận mật khẩu";
+                isValid = false;
+            } else if (confirmPassword !== password) {
+                confirmPasswordError.style.color = "red";
+                confirmPasswordError.style.fontSize = "12px";
+                confirmPasswordError.innerText = "Mật khẩu xác nhận không khớp";
+                isValid = false;
+            } else {
+                confirmPasswordError.innerText = "";
+            }
+
+            // Validate age
+            if (age < 18 || age > 60) {
+                ageError.style.color = "red";
+                ageError.style.fontSize = "12px";
+                ageError.innerText = "Tuổi phải nằm trong khoảng 18-60";
+                isValid = false;
+            } else {
+                ageError.innerText = "";
+            }
+
+            // Validate phone
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone)) {
+                phoneError.style.color = "red";
+                phoneError.style.fontSize = "12px";
+                phoneError.innerText = "Số điện thoại không đúng định dạng";
+                isValid = false;
+            } else {
+                phoneError.innerText = "";
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailError.style.color = "red";
+                emailError.style.fontSize = "12px";
+                emailError.innerText = "Email không đúng định dạng";
+                isValid = false;
+            } else {
+                emailError.innerText = "";
+            }
+
+            // Validate birthdate
+            if (birthdate.trim() === "") {
+                birthdateError.style.color = "red";
+                birthdateError.style.fontSize = "12px";
+                birthdateError.innerText = "Vui lòng chọn ngày sinh";
+                isValid = false;
+            } else {
+                birthdateError.innerText = "";
+            }
+
+            // Submit form if valid
+            if (isValid) {
+                form.submit();
+            }
+        });
+    </script>
+</body>
+
+</html>

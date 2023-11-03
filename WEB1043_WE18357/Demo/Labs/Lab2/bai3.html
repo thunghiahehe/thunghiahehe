@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Nhập trọng lương cơ thể: ");
+        var h = prompt("Nhập chiều cao: ");
+        var bmi = (a/(h*h));
+        if(bmi < 18.5){
+            alert("Thiếu cân");
+        }
+        else if(bmi >= 18 && bmi <=24.99){
+            alert("Bình thường");
+        }
+        else if(bmi >= 25 && bmi <=29.99){
+            alert("Thừa cân");
+        }
+        else{
+            alert("Béo phì");
+        }
+              
+    </script>
+</body>
+</html>

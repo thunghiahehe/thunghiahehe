@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const main = [];
+        const item1 = {
+            name: 'sản phẩm 1',
+            module: 'Máy tính',
+            cost: 5000,
+            quantity: 50,
+        };
+
+        const item2 = {
+            name: 'sản phẩm 2',
+            module: 'Máy giặt',
+            cost: 5000,
+            quantity: 50,
+        };
+
+        const item3 = {
+            name: 'sản phẩm 3',
+            module: 'Máy xay',
+            cost: 5000,
+            quantity: 50,
+        };
+
+
+        // Đưa 3 đối tượng này vào một mảng chính
+        main.push(item1);
+        main.push(item2);
+        main.push(item3);
+
+
+        // truy xuất  quantity element của item thứ 3 bằng console.
+        console.log(main[2].quantity)
+
+        // thêm item
+        const item4 = {
+            name: 'sản phẩm 4',
+            module: 'Máy xay',
+            cost: 5000,
+            quantity: 50,
+        };
+        main.push(item4);
+
+
+        // truy xuất các element trong mảng 
+        for (let i = 0; i < main.length; i++) {
+            console.log(main[i]);
+        }
+
+    </script>
+</body>
+
+</html>

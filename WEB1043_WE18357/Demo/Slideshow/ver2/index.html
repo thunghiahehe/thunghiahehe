@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <style>
+        .tong {
+            width: 700px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .slide {
+            border: 1px solid blueviolet;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        #nex {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+
+        }
+
+        #pre {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+        }
+
+        #anh {
+            width: 400px;
+            height: 300px;
+        }
+
+        button {
+            background-color: rgb(133, 133, 224);
+            color: azure;
+            cursor: pointer;
+        }
+    </style>
+
+    <body>
+        <div class="tong">
+            <h2>ALBUM ẢNH VERSION2</h2>
+            <div class="slide">
+                <h3>Ảnh <span id="num">1</span>/5</h3>
+                <img src="img/anh0.jpg" alt="" id="anh">
+                <button id="nex">NEXT</button>
+                <button id="pre">PREVIOS</button>
+            </div>
+        </div>
+        <script>
+            var album = [];
+            for (var i = 0; i < 5; i++) {
+                album[i] = new Image();
+                album[i].src = "img/anh" + i + ".jpg";
+            }
+            var index = 0;
+            function next() {
+                index++;
+                if (index >= 5) {
+                    index = 0;
+                }
+                document.getElementById('anh').src = album[index].src;
+                document.getElementById('num').innerHTML = index + 1;
+
+            }
+            document.getElementById("nex").onclick = next;
+            // th pre
+            function PREVIOS() {
+                index--;
+                if (index < 0) {
+                    index = 4;
+
+                }
+                document.getElementById('anh').src = album[index].src;
+                document.getElementById('num').innerHTML = index + 1;
+
+            }
+            document.getElementById("pre").onclick = PREVIOS;
+        </script>
+    </body>
+
+</html>

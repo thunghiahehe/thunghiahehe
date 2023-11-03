@@ -1,0 +1,28 @@
+﻿use QLDA
+go
+-- Cho biết các nhân viên có năm sinh trong khoảng 1960 đến 1965.
+SELECT CONCAT(HONV,' ',TENLOT,' ',TENNV) AS 'FULLNAME', CONVERT(date,NGSINH) AS 'NGSINH'
+FROM NHANVIEN
+WHERE YEAR(NGSINH) >= 1960 AND YEAR(NGSINH) <= 1965
+
+SELECT CONCAT(HONV,' ',TENLOT,' ',TENNV) AS 'FULLNAME', CONVERT(date,NGSINH) AS 'NGSINH'
+FROM NHANVIEN
+WHERE YEAR(NGSINH) BETWEEN 1960 AND 1965
+
+-- Cho biết tuổi của các nhân viên tính đến thời điểm hiện tại.
+SELECT CONCAT(HONV,' ',TENLOT,' ',TENNV) AS 'FULLNAME', YEAR(GETDATE()) - YEAR(NGSINH) AS 'TUOI'
+FROM NHANVIEN
+
+-- Dựa vào dữ liệu NGSINH, cho biết nhân viên sinh vào thứ mấy.
+SELECT CONCAT(HONV,' ',TENLOT,' ',TENNV) AS 'FULLNAME', YEAR(GETDATE()) - YEAR(NGSINH) AS 'TUOI',
+DATENAME(WEEKDAY,NGSINH) AS 'THU'
+FROM NHANVIEN
+
+-- Cho biết số lượng nhân viên, tên trưởng phòng, ngày nhận chức trưởng phòng và ngày
+--nhận chức trưởng phòng hiển thi theo định dạng dd-mm-yy (ví dụ 25-04-2019)
+SELECT TENPHG, TRPHG, B.TENNV, COUNT(A.MANV) AS 'SoLuongNV',
+CONVERT(varchar, NG_NHANCHUC, 105) AS 'NgayNhanChuc'
+FROM NHANVIEN A
+INNER JOIN PHONGBAN ON A.PHG = PHONGBAN.MAPHG
+INNER JOIN NHANVIEN B ON B.MANV = PHONGBAN.TRPHG
+GROUP BY TENPHG, TRPHG, NG_NHANCHUC, B.TENNV

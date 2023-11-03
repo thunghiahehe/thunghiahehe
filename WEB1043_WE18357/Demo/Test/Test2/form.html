@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span {
+            color: red;
+            font-size: 14px;
+            padding-left: 15px;
+        }
+
+        form {
+            width: 400px;
+            border: 1px solid;
+            padding: 0px 20px 20px 20px;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <p>ĐĂNG KÍ KHÓA HỌC ONLINE</p>
+        <label for="name">Họ tên</label>
+        <input type="text" name="name" id="name">
+        <span id="checkName"></span>
+        <br><br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <span id="checkMail"></span>
+        <br><br>
+        <label for="phone">Số điện thoại</label>
+        <input type="text" name="phone" id="phone">
+        <span id="checkPhone"></span>
+        <br><br>
+        <label for="khoaHoc">Khóa học</label>
+        <select name="khoaHoc" id="khoaHoc">
+            <option value="khoaHTML">Khóa HTML</option>
+            <option value="khoaJS">Khóa JS</option>
+            <option value="khoaPHP">Khóa PHP</option>
+        </select>
+        <br><br>
+        <label for="hocPhi">Học phí</label>
+        <input type="text" name="hocPhi" id="hocPhi" readonly>
+        <br><br>
+        <div class="hinhThuc">
+            <label for="hinhThuc">Hình thức học</label>
+            <input type="radio" name="hinhThuc" id="taiTruong" value="hinhThuc">Tại trường
+            <input type="radio" name="hinhThuc" id="hocOnline" value="hinhThuc">Học Online
+            <span id="checkHinhThuc"></span>
+        </div>
+        <br><br>
+        <div style="text-align: center;">
+            <input type="button" value="Đặt mua" onclick="validateForm()">
+        </div>
+    </form>
+    <script>
+        function validateForm() {
+
+            var name = document.getElementById("name").value;
+            if (name == "") {
+                document.getElementById("checkName").innerHTML = "Vui lòng nhập họ tên";
+                return false;
+            }
+            if (name != "") {
+                document.getElementById("checkName").innerHTML = "";
+
+            }
+
+            var email = document.getElementById("email").value;
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (email == "") {
+                document.getElementById("checkMail").innerHTML = "Vui lòng nhập email";
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                document.getElementById("checkMail").innerHTML = "Email không hợp lệ";
+                return false;
+            }
+            if (email != "") {
+                document.getElementById("checkMail").innerHTML = "";
+
+            }
+
+            var phone = document.getElementById("phone").value;
+            if (phone == "") {
+                document.getElementById("checkPhone").innerHTML = "Vui lòng nhập số điện thoại";
+                return false;
+            }
+            if (isNaN(phone)) {
+                document.getElementById("checkPhone").innerHTML = "Số điện thoại phải là số";
+                return false;
+            }
+            if (phone != "") {
+                document.getElementById("checkPhone").innerHTML = "";
+            }
+
+            var khoaHoc = document.getElementById("khoaHoc").value;
+            var hocPhi;
+            if (khoaHoc === "khoaHTML") {
+                hocPhi = 500;
+            }
+            else if (khoaHoc === "khoaJS") {
+                hocPhi = 800;
+            }
+            else if (khoaHoc === "khoaPHP") {
+                hocPhi = 1000;
+            }
+            document.getElementById("hocPhi").value = hocPhi;
+            // var check=true;
+            // var hinhThuc=document.getElementsByName("hinhThuc");
+            // var checkHinhThuc=document.querySelector("#checkHinhThuc");
+            // var checkChon="";
+            // for (var i = 0; i < hinhThuc.length; i++) {
+            //     if (hinhThuc[i].checked==true) {
+            //         checkChon="";
+            //     }
+
+            // }
+            // if (checkChon=="") {
+            //     checkHinhThuc.innerHTML="Chưa mục nào được chọn";
+            //     check=false;
+            // } else {
+            //     checkHinhThuc.innerHTML="";
+            // }
+            alert("Đăng kí thành công");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

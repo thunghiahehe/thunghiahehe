@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brixton Vietnam</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="image-header">
+                <img src="images/cropped-cropped-brixton_logo.png" alt="">
+            </div>
+            <div id="menu-header">
+                <ul>
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li><a href="#home" onclick="document.getElementById('home').scrollIntoView()">GIỚI THIỆU</a></li>
+                    <li>
+                        <a href="#">SẢN PHẨM</a>
+                        <ul class="sub-menu">
+                            <li><a href="#all-product"
+                                    onclick="document.getElementById('all-product').scrollIntoView()">Tất cả sản
+                                    phẩm</a></li>
+                            <li><a href="#suggested-price"
+                                    onclick="document.getElementById('suggested-price').scrollIntoView()">Bảng giá đề
+                                    xuất</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#gallery" onclick="document.getElementById('gallery').scrollIntoView()">THƯ VIỆN
+                            ẢNH</a></li>
+                    <li>
+                        <a href="#">SIGN IN</a>
+                        <ul class="sub-menu">
+                            <li><a href="signin.html">Sign in</a></li>
+                            <li><a href="signup.html">Sign up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="images/img1.jpg" style="width:100%;">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/img2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/img3.jpg" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <script src="js/slides.js"></script>
+            <div id="home" style="padding-bottom: 100px;"></div>
+            <div class="content-introduce" id="home">
+                <div class="logo">
+                    <img src="images/cropped-cropped-brixton_logo.png" alt="">
+
+                </div>
+                <div class="text-1">
+                    <h2 class="title"><b>Brixton Motorcycle đến từ đâu ?</b></h2>
+                    <p>Brixton Motorcycle là thương hiệu xe máy được phân phối bởi tập đoàn KSR (Áo) – doanh nghiệp đang
+                        phân phối khá nhiều loại xe cho thị trường châu Âu như Benelli, CFMoto, Generic…</p>
+                    <p>Các mẫu xe của Brixton BX được sản xuất tại Trung Quốc và phân phối sang các thị trường khác. Năm
+                        2019 các mẫu xe sẽ được sản xuất và lắp ráp tại Malaysia và được nhập khẩu mới 100% về Việt Nam.
+                        Brixton BX có 3 phiên bản khác nhau: BX Classic, BX Scrambler, BX Café Racer.</p>
+                    <p>Chính sách bảo hành : 2 năm hoặc 12.000km</p>
+                </div>
+            </div>
+
+            <h1 id="suggested-price" align="center" style="font-size: 40px; padding-top: 60px; padding-bottom: 20px;">
+                BẢNG GIÁ ĐỀ
+                XUẤT</h1>
+            <div class="container">
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/bx125_red_005-min.jpg" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>BRIXTON BX Classic</span>
+                        </div>
+                        <div class="container__item-title-body">
+                            125cc
+                        </div>
+                        <div class="container__item-title-body2">
+                            Màu sắc : đen, xanh, đỏ, xanh dương, đen bóng
+                        </div>
+                        <div class="container__item-title-button">
+                            <div><span>đ</span>44.900.000 <span>chiếc</span></div>
+                            <form action="signin.html"><button class="order">Đặt mua</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/brixton-bx-125-cafe-racer-15.png" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>BRIXTON BX Café Racer</span>
+                        </div>
+                        <div class="container__item-title-body">
+                            125cc
+                        </div>
+                        <div class="container__item-title-body2">
+                            Màu sắc : bạc, đỏ
+                        </div>
+                        <div class="container__item-title-button">
+                            <div><span>đ</span>55.100.000 <span>chiếc</span></div>
+                            <form action="signin.html"><button class="order">Đặt mua</button></form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/Black-BX125X-7-600x400.png" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>BRIXTON BX Scrambler</span>
+                        </div>
+                        <div class="container__item-title-body">
+                            125cc
+                        </div>
+                        <div class="container__item-title-body2">
+                            Màu sắc : đen, xanh đá, xánh lính, xám
+                        </div>
+                        <div class="container__item-title-button">
+                            <div><span>đ</span>52.800.000 <span>chiếc</span></div>
+                            <form action="signin.html"><button class="order">Đặt mua</button></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/bx125_red_005-min.jpg" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>BRIXTON BX Classic</span>
+                        </div>
+                        <div class="container__item-title-body">
+                            150cc
+                        </div>
+                        <div class="container__item-title-body2">
+                            Màu sắc : đen, xanh, đỏ, xanh dương, đen bóng
+                        </div>
+                        <div class="container__item-title-button">
+                            <div><span>đ</span>58.900.000 <span>chiếc</span></div>
+                            <form action="signin.html"><button class="order">Đặt mua</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/brixton-bx-125-cafe-racer-15.png" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>BRIXTON BX Café Racer</span>
+                        </div>
+                        <div class="container__item-title-body">
+                            150cc
+                        </div>
+                        <div class="container__item-title-body2">
+                            Màu sắc : bạc, đỏ
+                        </div>
+                        <div class="container__item-title-button">
+                            <div><span>đ</span>61.900.000 <span>chiếc</span></div>
+                            <form action="signin.html"><button class="order">Đặt mua</button></form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/Black-BX125X-7-600x400.png" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>BRIXTON BX Scrambler</span>
+                        </div>
+                        <div class="container__item-title-body">
+                            150cc
+                        </div>
+                        <div class="container__item-title-body2">
+                            Màu sắc : đen, xanh đá, xánh lính, xám
+                        </div>
+                        <div class="container__item-title-button">
+                            <div><span>đ</span>58.900.000 <span>chiếc</span></div>
+                            <form action="signin.html"><button class="order">Đặt mua</button></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 id="all-product" align="center" style="font-size: 40px; padding-top: 60px; padding-bottom: 20px;">SẢN
+                PHẨM</h1>
+            <div class="content-product">
+                <!-- <h1 id="gallery" align="center" style="font-size: 40px; padding-top: 60px; padding-bottom: 50px;">Products
+                </h1> -->
+                <div class="content-left">
+                    <div class="column">
+                        <img src="images/bx125_cutout-1.png" alt="" style="width: 300px;">
+                        <div class="text-2">
+                            <h2><b>BRIXTON BX 125</b></h2>
+                            <form action="signup.html">
+                                <button
+                                    style="width: 150px; height: 40px; border: 2px solid orange; border-radius: 20px; color: orange; background-color: white; font-size: 17px;">Tìm
+                                    hiểu thêm</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="images/bx125R_desk.png" alt="" style="width: 300px;">
+                        <div class="text-2">
+                            <h2><b>BRIXTON BX 125 R</b></h2>
+                            <h3 style="margin-bottom: 30px;">The Scrambler</h3>
+                            <form action="signup.html">
+                                <button
+                                    style="width: 150px; height: 40px; border: 2px solid orange; border-radius: 20px; color: orange; background-color: white; font-size: 17px;">Tìm
+                                    hiểu thêm</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="images/bx125X_desk.png" alt="" style="width: 300px;">
+                        <div class="text-2">
+                            <h2><b>BRIXTON BX 125 </b></h2>
+                            <h3 style="margin-bottom: 30px;">The Scrambler</h3>
+                            <form action="signup.html">
+                                <button
+                                    style="width: 150px; height: 40px; border: 2px solid orange; border-radius: 20px; color: orange; background-color: white; font-size: 17px;">Tìm
+                                    hiểu thêm</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div class="column">
+                        <img src="images/bx125_cutout-1.png" alt="" style="width: 300px;">
+                        <div class="text-2">
+                            <h2><b>BRIXTON BX 150</b></h2>
+                            <form action="signup.html">
+                                <button
+                                    style="width: 150px; height: 40px; border: 2px solid orange; border-radius: 20px; color: orange; background-color: white; font-size: 17px;">Tìm
+                                    hiểu thêm</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="images/bx125R_desk.png" alt="" style="width: 300px;">
+                        <div class="text-2">
+                            <h2><b>BRIXTON BX 150 R</b></h2>
+                            <h3 style="margin-bottom: 30px;">The Scrambler</h3>
+                            <form action="signup.html">
+                                <button
+                                    style="width: 150px; height: 40px; border: 2px solid orange; border-radius: 20px; color: orange; background-color: white; font-size: 17px;">Tìm
+                                    hiểu thêm</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="images/bx125X_desk.png" alt="" style="width: 300px;">
+                        <div class="text-2" id="product">
+                            <h2><b>BRIXTON BX 150 </b></h2>
+                            <h3 style="margin-bottom: 30px;">The Scrambler</h3>
+                            <form action="signup.html">
+                                <button
+                                    style="width: 150px; height: 40px; border: 2px solid orange; border-radius: 20px; color: orange; background-color: white; font-size: 17px;">Tìm
+                                    hiểu thêm</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 id="gallery" align="center" style="font-size: 40px; padding-top: 60px; padding-bottom: 50px;">
+                Collections
+            </h1>
+            <div class="collection">
+                <div class="gallery-items">
+                    <div class="column">
+                        <img src="images/brixton_bx125classic_005-1-min-300x300.jpg" alt="">
+                    </div>
+                    <div class="column">
+                        <img src="images/brixton_bx125classic_010-min-300x300.jpg" alt="">
+                    </div>
+                </div>
+                <div class="gallery-items">
+                    <div class="column">
+                        <img src="images/brixton_bx125classic_012-1-min-300x300.jpg" alt="">
+                    </div>
+                    <div class="column">
+                        <img src="images/brixton_bx125scrambler_003-300x300.jpg" alt="">
+                    </div>
+                </div>
+                <div class="gallery-items">
+                    <div class="column">
+                        <img src="images/brixton_bx125scrambler_005-300x300.jpg" alt="">
+                    </div>
+                    <div class="column">
+                        <img src="images/brixton_bx125classic_002-min-300x300.jpg" alt="">
+                    </div>
+                </div>
+                <div class="gallery-items">
+                    <div class="column">
+                        <img src="images/brixton_bx125classic_011-min-300x300.jpg" alt="">
+                    </div>
+                    <div class="column">
+                        <img src="images/brixton_bx125classic_008-min-300x300.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content-details">
+                <p style="font-size: 25px; color: orange;"><b>Tổng quan</b></p>
+                <p style="font-size: 20px; color: rgb(0, 0, 0);">Một sản phẩm như một làn gió mới nhưng đậm chất hoài cổ
+                    mang tên BRIXTON đã đến với Việt Nam. Ra mắt tại
+                    triển lãm hồi tháng 5, Brixton đã có màn “chào sân” ấn tượng với hàng trăm lượt đặt mua.
+                    <br>
+                    <br>
+                    Dòng xe Brixton có 3 kiểu dáng khác nhau: Classic, Srambler và Café Racer. Kiểu dáng chiếc Brixton
+                    Classic đậm nét thời gian, tay lái cao và rộng.
+                    <br>
+                    <br>
+                    Đồng hồ dáng tròn, màn hình điện tử hiển thị thông số tốc độ, mức xăng và quãng đường đi được. Đồng
+                    hồ
+                    analog hiển thị mô-men xoắn. Đồng thời có cổng USB 12V-10Ah gắn ở tay lái.
+                    <br>
+                    <br>
+                    Yên xe thiết kế dạng “bánh mỳ” cổ điển, vải bọc mềm mại, chiều cao từ mặt đất đến yên xe là 760 mm
+                    phù
+                    hợp với vóc dáng người Việt Nam.
+                    <br>
+                </p>
+            </div>
+
+            <h1 align="center" style="font-size: 40px; padding-top: 60px; padding-bottom: 20px;">Tin tức</h1>
+            <div class="container">
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/Brixton_hanoi-600x400.png" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>BẢNG GIÁ BRIXTON2019 MALAYSIA tại TAYAMOTOR THÁNG 4.2019</span>
+                        </div>
+                        <div class="container__item-title-body">
+
+                        </div>
+                        <div class="container__item-title-body2">
+
+                        </div>
+                        <div class="container__item-title-button">
+
+                            <form action="https://brixton.vn/bang-gia-brixton2019-malaysia-tai-tayamotor-thang-4-2019/">
+                                <button class="order">Xem thêm</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/Brixton_hanoi-1-600x400.png" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>DANH SÁCH NHẬN XE BRIXTON ĐỢT 2</span>
+                        </div>
+                        <div class="container__item-title-body">
+
+                        </div>
+                        <div class="container__item-title-body2">
+
+                        </div>
+                        <div class="container__item-title-button">
+
+                            <form action="https://brixton.vn/danh-sach-nhan-xe-brixton-dot-2/"><button class="order">Xem
+                                    thêm</button></form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container__item">
+                    <div class="container__item-img">
+                        <img src="images/Brixton_hanoi1-2-600x400.png" alt="">
+                    </div>
+                    <div class="container__item-title">
+                        <div class="container__item-title-top">
+                            <span>BRIXTON HÀ NỘI - ĐƠN HÀNG MỚI VỀ 13.07.2017</span>
+                        </div>
+                        <div class="container__item-title-body">
+
+                        </div>
+                        <div class="container__item-title-body2">
+
+                        </div>
+                        <div class="container__item-title-button">
+
+                            <form action="https://brixton.vn/brixton-ha-noi-don-hang-moi-ve-13-07-2017/"><button
+                                    class="order">Xem thêm</button></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subscribe">
+                <div class="subscribe-body">
+                    <div class="subscribe-body-sub">
+                        <div class="subscribe-body-sub-title">
+                            <h3>ĐẠI LÝ CHÍNH HÃNG TAYAMOTOR</h3>
+                            <p>Showroom 1: 148 La Thành, Đống Đa, Hà Nội - Showroom 2: 543 Nguyễn Văn Cừ, Long Biên, Hà
+                                Nội
+                                - Showroom 3: 158 Phạm Văn Đồng, Cầu Giấy, Hà Nội - Showroom 4: Số 6 Tô Hiệu nối dài
+                                (Đối
+                                diện Vietinbank Hà Tây), P.Quang Trung, Hà Đông, Hà Nội - Showroom 5: 821A Trần Văn
+                                Giàu,
+                                Quận Bình Tân, Tp.HCM – 090 6832 696- Showroom 6: 13 Lý Chính Thắng, Phường 8, Quận 3,
+                                Tp.HCM</p>
+                        </div>
+                        <form action="" class="subscribe-body-sub-form">
+                            <input type="text" placeholder="Địa chỉ email" required="">
+                            <button>Đăng kí</button>
+                            <p>Theo dõi các bản tin và chương trình khuyến mãi của Brixton <span>Đọc Chính sách bảo mật
+                                    của
+                                    chúng tôi.</span></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer style="clear: both;">
+            <p>© 2017 TAYA GLOBAL GROUP. All rights reserved</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

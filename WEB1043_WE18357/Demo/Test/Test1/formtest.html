@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 14px;
+            padding-left: 15px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        form {
+            width: 400px;
+            border: 1px solid;
+            padding: 5px 20px 20px 20px;
+        }
+
+        input[type="text"] {
+            float: right;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <p>ĐĂNG KÍ THÀNH VIÊN</p>
+        <label for="">Họ tên</label>
+        <input type="text" name="name" id="name">
+        <span id="checkName"></span>
+        <br><br>
+        <label for="">Email</label>
+        <input type="text" name="email" id="email">
+        <span id="checkMail"></span>
+        <br><br>
+        <label for="">Số điện thoại</label>
+        <input type="text" name="phone" id="phone">
+        <span id="checkPhone"></span>
+        <br><br>
+        <label for="">User</label>
+        <input type="text" name="user" id="user">
+        <span id="checkUser"></span>
+        <br><br>
+        <label for="">Pass</label>
+        <input type="text" name="pass" id="pass">
+        <span id="checkPass"></span>
+        <br><br>
+        <label for="">Repass</label>
+        <input type="text" name="rePass" id="rePass">
+        <span id="checkRePass"></span>
+        <br><br>
+        <label for="">Bạn biết chúng tôi</label>
+        <input type="radio" name="wh" id="fr">Bạn giới thiệu
+        <input type="radio" name="wh" id="fb">Qua FB
+        <br><br>
+        <div style="text-align: center;">
+            <input type="button" value="Đăng kí" onclick="validateForm()">
+        </div>
+    </form>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            if (name == "") {
+                document.getElementById("checkName").innerHTML = "Vui lòng nhập họ tên";
+                return false;
+            }
+            if (name != "") {
+                document.getElementById("checkName").innerHTML = "";
+            }
+
+            var email = document.getElementById("email").value;
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (email == "") {
+                document.getElementById("checkMail").innerHTML = "Vui lòng nhập email";
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                document.getElementById("checkMail").innerHTML = "Email không hợp lệ";
+                return false;
+            }
+            if (email != "") {
+                document.getElementById("checkMail").innerHTML = "";
+            }
+            var phone = document.getElementById("phone").value;
+            if (phone == "") {
+                document.getElementById("checkPhone").innerHTML = "Vui lòng nhập số điện thoại";
+                return false;
+            }
+            if (phone != "") {
+                document.getElementById("checkPhone").innerHTML = "";
+            }
+            var user = document.getElementById("user").value;
+            if (user == "") {
+                document.getElementById("checkUser").innerHTML = "Vui lòng nhập user";
+                return false;
+            }
+            if (user.length < 8) {
+                document.getElementById("checkUser").innerHTML = "User phải có ít nhất 8 kí tự";
+                return false;
+            }
+            if (user != "") {
+                document.getElementById("checkUser").innerHTML = "";
+            }
+            var pass = document.getElementById("pass").value;
+            if (pass == "") {
+                document.getElementById("checkPass").innerHTML = "Vui lòng nhập mật khẩu";
+                return false;
+            }
+            if (pass != "") {
+                document.getElementById("checkPass").innerHTML = "";
+            }
+            var rePass = document.getElementById("rePass").value;
+            if (rePass == "") {
+                document.getElementById("checkRePass").innerHTML = "Vui lòng nhập lại mật khẩu";
+                return false;
+            }
+            if (rePass != pass) {
+                document.getElementById("checkRePass").innerHTML = "Mật khẩu không khớp";
+                return false;
+            }
+            if (rePass != "") {
+                document.getElementById("checkRePass").innerHTML = "";
+            }
+
+            alert("Đăng kí thành công");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

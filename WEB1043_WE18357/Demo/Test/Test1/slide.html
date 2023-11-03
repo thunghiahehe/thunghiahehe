@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tong {
+            width: 700px;
+            text-align: center;
+            margin: auto;
+
+        }
+
+        .slide {
+            position: relative;
+        }
+
+        #pre {
+            position: absolute;
+            left: 500px;
+            top: 40%;
+        }
+
+        #nex {
+            position: absolute;
+            right: 500px;
+            top: 40%;
+        }
+
+        img {
+            width: 400px;
+            height: 300px;
+        }
+
+        button {
+            border: none;
+            width: 60px;
+            height: 20px;
+            color: aliceblue;
+            background-color: rgb(70, 162, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="slide">
+            <img src="img/anh0.jpg" alt="" id="img">
+        </div>
+        <div class="control">
+            <button id="pre">Previos</button>
+            <button id="nex">Next</button>
+        </div>
+    </div>
+    <script>
+        var album = [];
+        for (var i = 0; i < 5; i++) {
+            album[i] = new Image();
+            album[i].src = "img/anh" + i + ".jpg";
+
+        }
+        var index = 0;
+        function slideShow() {
+            index++;
+            if (index >= 5) {
+                index = 0;
+            }
+            document.getElementById("img").src = album[index].src;
+        }
+        setInterval(slideShow, 3000);
+
+        function prev() {
+            index--;
+            if (index < 0) {
+                index = 4;
+            }
+            document.getElementById("img").src = album[index].src;
+        }
+        document.getElementById("pre").onclick = prev;
+        function next() {
+            index++;
+            if (index >= 5) {
+                index = 0;
+            }
+            document.getElementById("img").src = album[index].src;
+        }
+        document.getElementById("nex").onclick = next;
+    </script>
+</body>
+
+</html>
